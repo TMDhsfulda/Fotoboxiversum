@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Fotoboxiversum</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+
+</head>
+
+<body>
+<header id="head0r"> <a href="index.html"><img src="Bilder/title.png" alt="Fotoboxiversum-Titelbild" id="Titelbild"></a> </header>
+<!-- LEER weil Logo im auf dem Hintergrundbild --> 
+
+<!-- Navigationsleiste für das Menü -->
+
+	<nav class="navBar"> 
+		<a href="pages/Home.html" class="buttons2">Home</a>&nbsp;&nbsp; 
+		<a href="pages/Fotoboxen.html" class="buttons2">Fotoboxen</a>&nbsp;&nbsp; 
+		<a href="pages/Kosten.html" class="buttons2">Kosten</a>&nbsp;&nbsp; 
+		<a href="pages/Ablauf.html" class="buttons2">Ablauf</a>&nbsp;&nbsp; 
+		<a href="pages/Referenzen.html" class="buttons2">Referenzen</a>&nbsp;&nbsp; 
+		<a href="pages/Buchung.html" class="buttons2">Buchung</a>&nbsp;&nbsp; 
+	</nav>
+
+<!-- Nav Ende -->
+
+<section> <!-- Bereich für die Haupttext der Website -->
+  
+	
+	
+	
+	
+  <header id="Kopfzeile"></header>
+  <article class="art"> <!-- eigenständiger Text in Bereich "section": für Zeitungsartikel etc. mit eigenem header, text und footer -->
+    
+      <p>Haben Sie schon eine besondere idee für Ihre nächste Feier?</p>
+    
+    <figure id="artbild"> 
+      
+				<!--<p>Canvas Solarsystem</p>-->
+	<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations -->
+
+		
+<script>
+var sun = new Image();
+var moon = new Image();
+var earth = new Image();
+function init() {
+  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
+  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
+  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  window.requestAnimationFrame(draw);
+}
+
+function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  ctx.globalCompositeOperation = 'destination-over';
+  ctx.clearRect(0, 0, 300, 300); // clear canvas
+
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+  ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+  ctx.save();
+  ctx.translate(150, 150);
+
+  // Earth
+  var time = new Date();
+  ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+  ctx.translate(105, 0);
+  ctx.fillRect(0, -12, 50, 24); // Shadow
+  ctx.drawImage(earth, -12, -12);
+
+  // Moon
+  ctx.save();
+  ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+  ctx.translate(0, 28.5);
+  ctx.drawImage(moon, -3.5, -3.5);
+  ctx.restore();
+
+  ctx.restore();
+  
+  ctx.beginPath();
+  ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // Earth orbit
+  ctx.stroke();
+ 
+  ctx.drawImage(sun, 0, 0, 300, 300);
+
+  window.requestAnimationFrame(draw);
+}
+
+init();
+</script>
+		<p><canvas id="canvas" width="300" height="300"></canvas></p>
+	
+	  
+	  
+	  </figure>
+    <p><small id="untertitel">Bei uns dreht sich alles um Ihre Wünsche!</small></p>
+    <br>
+    <ul id="werbetext">
+      <li>Sie suchen ein besonderes Event für Ihren Geburtstag, Ihre Hochzeitsfeier oder für einen anderen
+        schönen Anlass?</li>
+      <li>Ihnen ist eine Abwechslung zu den Hochzeitsspielen wichtig und wollen für sich und
+        Ihre Gäste eine tolle Möglichkeit haben, sich an diesen wundervollen Tag zu erinnern?</li>
+    </ul>
+    <br>
+    <p id="werbetext2"> Dann sind sie bei uns an der richtigen Adresse - hier finden Sie wunderschöne Fotoboxen mit Weltall-Motiven!</p>
+	  <p><img class="Beispielbilder" alt="Fotobox Milchstaße" src="Bilder/milky-way.jpg"/>
+		  <img class="Beispielbilder" alt = "Fotobox Road" src="Bilder/road.jpg"/>
+		  <img class="Beispielbilder" alt = "Fotobox Universe" src="Bilder/universe.jpg"/>
+	  </p>
+    <!-- <footer>Tolle Verlinkungen</footer><br><br> --> 
+    
+  </article>
+	
+	
+	
+	
+	
+	
+</section>
+<!-- Bereich für Haupttext Ende -->
+
+<aside> <!-- Für etwas unwichtigere Informationen --> 
+  
+</aside>
+<footer id = "foot0r"> <!-- Fußende: AGB, Impressum, Kontakt etc. --> 
+  
+  <a href="pages/Impressum.html">Impressum</a>&nbsp;&nbsp; <a href="pages/Kontakt.html">Kontakt</a>&nbsp;&nbsp; <a href="pages/AGB.html">AGB</a>&nbsp;&nbsp; <a href="pages/Datenschutz.html">Datenschutzerklärung</a>&nbsp;&nbsp; <a href="pages/Quellen.html">Quellennachweise</a>&nbsp;&nbsp; </footer>
+</body>
+</html>
